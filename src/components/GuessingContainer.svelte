@@ -6,6 +6,8 @@
 
     let noMoviesFound = false;
 
+    //How to show the images that I can pull from TMDB, if needed: https://developer.themoviedb.org/docs/image-basics
+
     /**
      * @param {any} e
      */
@@ -65,7 +67,7 @@
     }
 </script>
 
-<div class="w-2/3">
+<div class="px-5 w-full md:w-96">
     <input id="guessInput" on:input={searchInputChanged} on:keyup={updateAutoPredictList} class="border border-slate-500 rounded-xl drop-shadow-l w-full p-5 mt-10" type="text" placeholder="Type your movie guess here..."/>
     <div class="sticky top-0 left-0 mx-5 flex flex-col max-h-48 overflow-hidden overflow-y-auto">
         {#if autoPredictMovies.length > 0}
@@ -79,3 +81,20 @@
         {/if}
     </div>
 </div>
+
+<style>
+    ::-webkit-scrollbar {
+        width:0.5em;
+        margin-right: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgb(0, 0, 0, 0);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: white;
+        height: 2px;
+        border-radius: 1em;
+    }
+</style>

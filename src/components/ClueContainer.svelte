@@ -7,7 +7,7 @@
      /**
      * @type {any}
      */
-     export let currentClue = 4;
+     export let currentClue = 0;
 </script>
 
 <div class="flex flex-col">
